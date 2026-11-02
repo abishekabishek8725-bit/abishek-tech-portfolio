@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Abishek | Developer Portfolio</title>
 
     <style>
@@ -18,24 +19,25 @@
             font-family: Arial, sans-serif;
             background: #080812;
             color: white;
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
         header {
             position: fixed;
             top: 0;
             width: 100%;
-            padding: 20px 8%;
+            padding: 18px 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(8, 8, 18, 0.9);
+            background: rgba(8, 8, 18, 0.95);
             backdrop-filter: blur(12px);
             z-index: 100;
+            border-bottom: 1px solid #25253b;
         }
 
         .logo {
-            font-size: 24px;
+            font-size: 23px;
             font-weight: bold;
             color: #a78bfa;
         }
@@ -43,8 +45,9 @@
         nav a {
             color: white;
             text-decoration: none;
-            margin-left: 22px;
+            margin-left: 20px;
             font-size: 14px;
+            transition: 0.3s;
         }
 
         nav a:hover {
@@ -72,22 +75,23 @@
         .hero h3 {
             color: #a78bfa;
             font-size: 20px;
+            letter-spacing: 3px;
         }
 
         .hero h1 {
-            font-size: clamp(45px, 8vw, 75px);
-            margin: 12px 0;
+            font-size: clamp(50px, 8vw, 80px);
+            margin: 10px 0;
         }
 
         .hero h2 {
-            font-size: clamp(22px, 4vw, 34px);
+            font-size: clamp(23px, 4vw, 35px);
             color: #a78bfa;
         }
 
         .hero p {
             color: #b5b5c9;
             margin: 20px 0 30px;
-            max-width: 600px;
+            max-width: 650px;
         }
 
         .btn {
@@ -97,7 +101,7 @@
             color: white;
             text-decoration: none;
             border-radius: 8px;
-            margin-right: 10px;
+            margin: 6px;
             transition: 0.3s;
         }
 
@@ -112,7 +116,7 @@
         }
 
         .section-title {
-            font-size: 35px;
+            font-size: 36px;
             text-align: center;
             margin-bottom: 45px;
         }
@@ -124,7 +128,7 @@
         .about-box {
             max-width: 850px;
             margin: auto;
-            padding: 30px;
+            padding: 35px;
             background: #121222;
             border: 1px solid #292944;
             border-radius: 15px;
@@ -133,13 +137,14 @@
 
         .about-box p {
             color: #b5b5c9;
+            margin-top: 15px;
         }
 
         .skills-grid,
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
         }
 
         .card {
@@ -169,10 +174,10 @@
             display: inline-block;
             background: #24203b;
             color: #c4b5fd;
-            padding: 8px 13px;
-            margin: 6px;
+            padding: 7px 12px;
+            margin: 5px;
             border-radius: 7px;
-            font-size: 14px;
+            font-size: 13px;
         }
 
         .education {
@@ -192,6 +197,10 @@
         .contact p {
             color: #aaaac0;
             margin-bottom: 25px;
+        }
+
+        .contact a {
+            margin: 7px;
         }
 
         footer {
@@ -237,6 +246,7 @@
 
 <body>
 
+    <!-- NAVIGATION -->
     <header>
         <div class="logo">ABISHEK.DEV</div>
 
@@ -250,8 +260,10 @@
         </nav>
     </header>
 
+    <!-- HOME -->
     <section class="hero" id="home">
         <div class="hero-content">
+
             <h3>HELLO, WORLD! I'M</h3>
 
             <h1>Abishek</h1>
@@ -265,36 +277,54 @@
                 technology that solves real-world problems.
             </p>
 
-            <a href="#projects" class="btn">Explore Projects</a>
-            <a href="#contact" class="btn outline">Contact Me</a>
+            <a href="#projects" class="btn">
+                Explore Projects
+            </a>
+
+            <a href="#contact" class="btn outline">
+                Contact Me
+            </a>
+
         </div>
     </section>
 
+    <!-- ABOUT -->
     <section id="about">
-        <h2 class="section-title">About <span>Me</span></h2>
+
+        <h2 class="section-title">
+            About <span>Me</span>
+        </h2>
 
         <div class="about-box">
+
             <h3>I'm Abishek 👨‍💻</h3>
 
             <p>
-                I'm an enthusiastic Information Technology student
-                who loves exploring new technologies and creating
-                useful digital solutions.
+                I'm an enthusiastic Information Technology
+                student who loves exploring new technologies
+                and creating useful digital solutions.
 
                 I'm currently developing my programming skills
                 in Python, HTML, CSS and JavaScript.
 
-                My interests include AI applications, backend
-                development, cybersecurity and software engineering.
+                My interests include AI applications,
+                backend development, cybersecurity and
+                software engineering.
 
-                My goal is to become a skilled Full-Stack Developer
-                and create applications that make a difference.
+                My goal is to become a skilled Full-Stack
+                Developer and create applications that
+                solve real-world problems.
             </p>
+
         </div>
     </section>
 
+    <!-- SKILLS -->
     <section id="skills">
-        <h2 class="section-title">My <span>Skills</span></h2>
+
+        <h2 class="section-title">
+            My <span>Skills</span>
+        </h2>
 
         <div class="skills-grid">
 
@@ -305,14 +335,14 @@
             </div>
 
             <div class="card">
-                <h3>Frontend</h3>
+                <h3>Frontend Development</h3>
                 <span class="skill-tag">HTML</span>
                 <span class="skill-tag">CSS</span>
                 <span class="skill-tag">JavaScript - Learning</span>
             </div>
 
             <div class="card">
-                <h3>Backend</h3>
+                <h3>Backend Development</h3>
                 <span class="skill-tag">Python Backend - Learning</span>
                 <span class="skill-tag">Node.js - Exploring</span>
             </div>
@@ -328,8 +358,12 @@
         </div>
     </section>
 
+    <!-- PROJECTS -->
     <section id="projects">
-        <h2 class="section-title">My <span>Projects</span></h2>
+
+        <h2 class="section-title">
+            My <span>Projects</span>
+        </h2>
 
         <div class="projects-grid">
 
@@ -390,45 +424,72 @@
         </div>
     </section>
 
+    <!-- EDUCATION -->
     <section id="education">
-        <h2 class="section-title">My <span>Education</span></h2>
+
+        <h2 class="section-title">
+            My <span>Education</span>
+        </h2>
 
         <div class="card education">
+
             <h3>Bachelor of Technology (B.Tech)</h3>
+
             <h4>Information Technology</h4>
-            <p>Currently pursuing my undergraduate degree.</p>
-            <p>Focus: Programming, Software Development and AI.</p>
+
+            <p>
+                Currently pursuing my undergraduate degree.
+            </p>
+
+            <p>
+                Focus: Programming, Software Development
+                and Artificial Intelligence.
+            </p>
+
         </div>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact" class="contact">
-        <h2 class="section-title">Let's <span>Connect</span></h2>
+
+        <h2 class="section-title">
+            Let's <span>Connect</span>
+        </h2>
 
         <p>
             Interested in technology, development and
             innovative ideas? Let's connect!
         </p>
 
-        <!-- Replace with your real email -->
+        <!-- Replace with your actual email -->
         <a href="mailto:YOUR_EMAIL@example.com" class="btn">
             Email Me
         </a>
 
-        <!-- Replace # with your actual profile URLs -->
-        <a href="https://github.com/YOUR_USERNAME" target="_blank" class="btn outline">
+        <!-- YOUR REAL GITHUB PROFILE -->
+        <a href="https://github.com/abishekabishek8725-bit" target="_blank" rel="noopener noreferrer"
+            class="btn outline">
             GitHub
         </a>
 
-        <a href="https://linkedin.com/in/YOUR_USERNAME" target="_blank" class="btn outline">
-            LinkedIn
+        <!-- Add your LinkedIn URL when available -->
+        <a href="#contact" class="btn outline">
+            LinkedIn - Coming Soon
         </a>
+
     </section>
 
+    <!-- FOOTER -->
     <footer>
-        <p>© 2026 <span>Abishek</span>. Built with passion and code.</p>
+        <p>
+            © 2026 <span>Abishek</span>.
+            Built with passion and code.
+        </p>
     </footer>
 
+    <!-- TYPING ANIMATION -->
     <script>
+
         const roles = [
             "Aspiring Full-Stack Developer",
             "Python Programmer",
@@ -443,10 +504,14 @@
         const typing = document.getElementById("typing");
 
         function typeEffect() {
+
             const current = roles[index];
 
             if (!deleting) {
-                typing.textContent = current.substring(0, character + 1);
+
+                typing.textContent =
+                    current.substring(0, character + 1);
+
                 character++;
 
                 if (character === current.length) {
@@ -454,8 +519,12 @@
                     setTimeout(typeEffect, 1400);
                     return;
                 }
+
             } else {
-                typing.textContent = current.substring(0, character - 1);
+
+                typing.textContent =
+                    current.substring(0, character - 1);
+
                 character--;
 
                 if (character === 0) {
@@ -468,6 +537,7 @@
         }
 
         typeEffect();
+
     </script>
 
 </body>

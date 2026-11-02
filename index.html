@@ -1,10 +1,10 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Abishek | Developer Portfolio</title>
 
     <style>
@@ -19,35 +19,37 @@
             font-family: Arial, sans-serif;
             background: #080812;
             color: white;
-            line-height: 1.7;
+            line-height: 1.6;
         }
 
         header {
-            position: fixed;
+            position: sticky;
             top: 0;
-            width: 100%;
+            z-index: 100;
+            background: #101020;
             padding: 18px 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(8, 8, 18, 0.95);
-            backdrop-filter: blur(12px);
-            z-index: 100;
-            border-bottom: 1px solid #25253b;
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
         .logo {
-            font-size: 23px;
-            font-weight: bold;
             color: #a78bfa;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin-left: 20px;
-            font-size: 14px;
-            transition: 0.3s;
         }
 
         nav a:hover {
@@ -55,190 +57,137 @@
         }
 
         section {
-            padding: 100px 10%;
-            scroll-margin-top: 65px;
+            padding: 80px 8%;
         }
 
         .hero {
-            min-height: 100vh;
+            min-height: 85vh;
             display: flex;
             align-items: center;
-            background:
-                radial-gradient(circle at 80% 30%, #34206b 0%, transparent 35%),
-                #080812;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
         }
 
         .hero-content {
-            max-width: 750px;
-        }
-
-        .hero h3 {
-            color: #a78bfa;
-            font-size: 20px;
-            letter-spacing: 3px;
+            flex: 1;
+            min-width: 260px;
         }
 
         .hero h1 {
-            font-size: clamp(50px, 8vw, 80px);
-            margin: 10px 0;
+            font-size: clamp(36px, 6vw, 55px);
+            line-height: 1.2;
         }
 
-        .hero h2 {
-            font-size: clamp(23px, 4vw, 35px);
+        .hero h1 span {
             color: #a78bfa;
         }
 
         .hero p {
-            color: #b5b5c9;
-            margin: 20px 0 30px;
-            max-width: 650px;
+            margin: 20px 0;
+            color: #c4c4d4;
         }
 
-        .btn {
+        .profile-photo {
+            width: 230px;
+            height: 230px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #8b5cf6;
+            box-shadow: 0 0 30px #8b5cf6;
+        }
+
+        .button {
             display: inline-block;
-            padding: 12px 25px;
-            background: #8b5cf6;
+            padding: 12px 24px;
+            background: #7c3aed;
             color: white;
             text-decoration: none;
             border-radius: 8px;
-            margin: 6px;
+            margin: 8px 8px 8px 0;
             transition: 0.3s;
         }
 
-        .btn:hover {
-            background: #6d28d9;
+        .button:hover {
+            background: #2563eb;
             transform: translateY(-3px);
         }
 
-        .outline {
-            background: transparent;
-            border: 1px solid #8b5cf6;
-        }
-
         .section-title {
-            font-size: 36px;
             text-align: center;
-            margin-bottom: 45px;
-        }
-
-        .section-title span {
             color: #a78bfa;
+            font-size: 32px;
+            margin-bottom: 35px;
         }
 
-        .about-box {
-            max-width: 850px;
+        .about-text {
+            max-width: 800px;
             margin: auto;
-            padding: 35px;
-            background: #121222;
-            border: 1px solid #292944;
-            border-radius: 15px;
             text-align: center;
+            color: #c4c4d4;
         }
 
-        .about-box p {
-            color: #b5b5c9;
-            margin-top: 15px;
-        }
-
-        .skills-grid,
-        .projects-grid {
+        .skills,
+        .projects {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 22px;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
         }
 
         .card {
-            padding: 25px;
-            background: #121222;
+            background: #151526;
             border: 1px solid #292944;
-            border-radius: 14px;
+            padding: 25px;
+            border-radius: 12px;
             transition: 0.3s;
         }
 
         .card:hover {
-            transform: translateY(-7px);
+            transform: translateY(-6px);
             border-color: #8b5cf6;
         }
 
         .card h3 {
-            color: #c4b5fd;
-            margin-bottom: 12px;
+            color: #a78bfa;
+            margin-bottom: 10px;
         }
 
         .card p {
-            color: #aaaac0;
-            font-size: 14px;
-        }
-
-        .skill-tag {
-            display: inline-block;
-            background: #24203b;
-            color: #c4b5fd;
-            padding: 7px 12px;
-            margin: 5px;
-            border-radius: 7px;
-            font-size: 13px;
-        }
-
-        .education {
-            max-width: 700px;
-            margin: auto;
-            text-align: center;
-        }
-
-        .education p {
-            color: #aaaac0;
+            color: #c4c4d4;
         }
 
         .contact {
             text-align: center;
         }
 
-        .contact p {
-            color: #aaaac0;
-            margin-bottom: 25px;
-        }
-
-        .contact a {
-            margin: 7px;
+        .social-links {
+            margin-top: 25px;
         }
 
         footer {
+            background: #101020;
             text-align: center;
-            padding: 25px;
-            background: #10101c;
-            color: #aaaac0;
+            padding: 22px;
+            color: #aaa;
         }
 
-        footer span {
-            color: #a78bfa;
-        }
-
-        @media(max-width: 700px) {
+        @media (max-width: 600px) {
             header {
-                padding: 15px 5%;
-                flex-direction: column;
-                gap: 12px;
+                justify-content: center;
             }
 
             nav {
-                display: flex;
-                flex-wrap: wrap;
                 justify-content: center;
-                gap: 12px;
-            }
-
-            nav a {
-                margin: 0;
-                font-size: 12px;
-            }
-
-            section {
-                padding: 100px 6%;
             }
 
             .hero {
                 text-align: center;
+                justify-content: center;
+            }
+
+            .profile-photo {
+                width: 190px;
+                height: 190px;
             }
         }
     </style>
@@ -246,9 +195,8 @@
 
 <body>
 
-    <!-- NAVIGATION -->
     <header>
-        <div class="logo">ABISHEK.DEV</div>
+        <div class="logo">ABISHEK.</div>
 
         <nav>
             <a href="#home">Home</a>
@@ -262,284 +210,160 @@
 
     <!-- HOME -->
     <section class="hero" id="home">
+
         <div class="hero-content">
+            <h1>Hello, I'm <span>Abishek</span></h1>
 
-            <h3>HELLO, WORLD! I'M</h3>
-
-            <h1>Abishek</h1>
-
-            <h2 id="typing">Aspiring Developer</h2>
+            <h2>IT Student | Aspiring Developer</h2>
 
             <p>
-                I'm a B.Tech Information Technology student
-                passionate about Full-Stack Development,
-                Artificial Intelligence and building
-                technology that solves real-world problems.
+                Welcome to my personal portfolio.
+                I am learning programming and web development
+                and building creative technology projects.
             </p>
 
-            <a href="#projects" class="btn">
-                Explore Projects
-            </a>
-
-            <a href="#contact" class="btn outline">
-                Contact Me
-            </a>
-
+            <a href="#projects" class="button">Explore Projects</a>
+            <a href="#contact" class="button">Contact Me</a>
         </div>
+
+        <div>
+            <img src="images/profile.png" alt="Abishek profile photo" class="profile-photo">
+        </div>
+
     </section>
 
     <!-- ABOUT -->
     <section id="about">
 
-        <h2 class="section-title">
-            About <span>Me</span>
-        </h2>
+        <h2 class="section-title">About Me</h2>
 
-        <div class="about-box">
+        <p class="about-text">
+            I am a B.Tech Information Technology student
+            interested in software development, artificial
+            intelligence and modern web technologies.
 
-            <h3>I'm Abishek 👨‍💻</h3>
+            My goal is to improve my technical skills,
+            develop useful applications and solve
+            real-world problems through technology.
+        </p>
 
-            <p>
-                I'm an enthusiastic Information Technology
-                student who loves exploring new technologies
-                and creating useful digital solutions.
-
-                I'm currently developing my programming skills
-                in Python, HTML, CSS and JavaScript.
-
-                My interests include AI applications,
-                backend development, cybersecurity and
-                software engineering.
-
-                My goal is to become a skilled Full-Stack
-                Developer and create applications that
-                solve real-world problems.
-            </p>
-
-        </div>
     </section>
 
     <!-- SKILLS -->
     <section id="skills">
 
-        <h2 class="section-title">
-            My <span>Skills</span>
-        </h2>
+        <h2 class="section-title">My Skills</h2>
 
-        <div class="skills-grid">
+        <div class="skills">
 
             <div class="card">
-                <h3>Programming</h3>
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">Problem Solving</span>
+                <h3>HTML</h3>
+                <p>Webpage structure and elements.</p>
             </div>
 
             <div class="card">
-                <h3>Frontend Development</h3>
-                <span class="skill-tag">HTML</span>
-                <span class="skill-tag">CSS</span>
-                <span class="skill-tag">JavaScript - Learning</span>
+                <h3>CSS</h3>
+                <p>Website styling and responsive design.</p>
             </div>
 
             <div class="card">
-                <h3>Backend Development</h3>
-                <span class="skill-tag">Python Backend - Learning</span>
-                <span class="skill-tag">Node.js - Exploring</span>
+                <h3>Python</h3>
+                <p>Programming fundamentals and logic.</p>
             </div>
 
             <div class="card">
-                <h3>Tools & Technologies</h3>
-                <span class="skill-tag">VS Code</span>
-                <span class="skill-tag">Git</span>
-                <span class="skill-tag">GitHub</span>
-                <span class="skill-tag">Linux</span>
+                <h3>JavaScript</h3>
+                <p>Learning interactive web development.</p>
+            </div>
+
+            <div class="card">
+                <h3>Git & GitHub</h3>
+                <p>Version control and project hosting.</p>
             </div>
 
         </div>
+
     </section>
 
     <!-- PROJECTS -->
     <section id="projects">
 
-        <h2 class="section-title">
-            My <span>Projects</span>
-        </h2>
+        <h2 class="section-title">My Projects</h2>
 
-        <div class="projects-grid">
+        <div class="projects">
 
             <div class="card">
-                <h3>01. Nexus AI</h3>
-                <p>
-                    Personal AI chat application concept
-                    designed to provide an intelligent
-                    conversational experience.
-                </p>
+                <h3>Nexus AI</h3>
+                <p>Personal AI chat application concept.</p>
+                <p><strong>Status:</strong> In Progress</p>
             </div>
 
             <div class="card">
-                <h3>02. SpendWise</h3>
-                <p>
-                    A personal finance platform concept
-                    that helps users understand spending
-                    patterns and manage budgets.
-                </p>
+                <h3>SpendWise</h3>
+                <p>A personal expense tracking project.</p>
+                <p><strong>Status:</strong> Prototype</p>
             </div>
 
             <div class="card">
-                <h3>03. SafeWalk</h3>
-                <p>
-                    A personal safety application concept
-                    focused on helping students access
-                    safety support.
-                </p>
+                <h3>SafeWalk</h3>
+                <p>A student personal safety application concept.</p>
+                <p><strong>Status:</strong> Idea</p>
             </div>
 
             <div class="card">
-                <h3>04. Campus Lost & Found</h3>
-                <p>
-                    A platform concept that helps students
-                    report and find lost belongings
-                    within a campus.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>05. LifeHub</h3>
-                <p>
-                    A daily-life utility application
-                    concept bringing useful tools
-                    together in one place.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>06. College Event Hub</h3>
-                <p>
-                    A web application concept for
-                    discovering and managing
-                    college events.
-                </p>
+                <h3>Campus Lost & Found</h3>
+                <p>A platform concept for finding lost items.</p>
+                <p><strong>Status:</strong> Idea</p>
             </div>
 
         </div>
+
     </section>
 
     <!-- EDUCATION -->
     <section id="education">
 
-        <h2 class="section-title">
-            My <span>Education</span>
-        </h2>
+        <h2 class="section-title">Education</h2>
 
-        <div class="card education">
-
-            <h3>Bachelor of Technology (B.Tech)</h3>
-
-            <h4>Information Technology</h4>
-
-            <p>
-                Currently pursuing my undergraduate degree.
-            </p>
-
-            <p>
-                Focus: Programming, Software Development
-                and Artificial Intelligence.
-            </p>
-
+        <div class="card">
+            <h3>B.Tech Information Technology</h3>
+            <p>SNS College of Technology</p>
+            <p>Currently Pursuing</p>
         </div>
+
     </section>
 
     <!-- CONTACT -->
     <section id="contact" class="contact">
 
-        <h2 class="section-title">
-            Let's <span>Connect</span>
-        </h2>
+        <h2 class="section-title">Connect With Me</h2>
 
         <p>
-            Interested in technology, development and
-            innovative ideas? Let's connect!
+            Interested in technology, development
+            and learning new things.
         </p>
 
-        <!-- Replace with your actual email -->
-        <a href="mailto:YOUR_EMAIL@example.com" class="btn">
-            Email Me
-        </a>
+        <div class="social-links">
 
-        <!-- YOUR REAL GITHUB PROFILE -->
-        <a href="https://github.com/abishekabishek8725-bit" target="_blank" rel="noopener noreferrer"
-            class="btn outline">
-            GitHub
-        </a>
+            <a href="https://github.com/abishekabishek8725-bit" target="_blank" rel="noopener noreferrer"
+                class="button">
+                GitHub
+            </a>
 
-        <!-- Add your LinkedIn URL when available -->
-        <a href="#contact" class="btn outline">
-            LinkedIn - Coming Soon
-        </a>
+            <a href="https://www.linkedin.com/in/abishek-abishek-13110341a/" target="_blank" rel="noopener noreferrer"
+                class="button">
+                LinkedIn
+            </a>
+
+        </div>
 
     </section>
 
-    <!-- FOOTER -->
     <footer>
-        <p>
-            © 2026 <span>Abishek</span>.
-            Built with passion and code.
-        </p>
+        <p>© 2026 Abishek | Personal Developer Portfolio</p>
     </footer>
-
-    <!-- TYPING ANIMATION -->
-    <script>
-
-        const roles = [
-            "Aspiring Full-Stack Developer",
-            "Python Programmer",
-            "AI Enthusiast",
-            "Technology Explorer"
-        ];
-
-        let index = 0;
-        let character = 0;
-        let deleting = false;
-
-        const typing = document.getElementById("typing");
-
-        function typeEffect() {
-
-            const current = roles[index];
-
-            if (!deleting) {
-
-                typing.textContent =
-                    current.substring(0, character + 1);
-
-                character++;
-
-                if (character === current.length) {
-                    deleting = true;
-                    setTimeout(typeEffect, 1400);
-                    return;
-                }
-
-            } else {
-
-                typing.textContent =
-                    current.substring(0, character - 1);
-
-                character--;
-
-                if (character === 0) {
-                    deleting = false;
-                    index = (index + 1) % roles.length;
-                }
-            }
-
-            setTimeout(typeEffect, deleting ? 45 : 85);
-        }
-
-        typeEffect();
-
-    </script>
 
 </body>
 
 </html>
+```
